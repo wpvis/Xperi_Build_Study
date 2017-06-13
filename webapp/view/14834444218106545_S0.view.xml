@@ -23,6 +23,7 @@
 				<m:ToolbarSpacer/>
 				<m:OverflowToolbarButton text="Add" icon="sap-icon://add"/>
 				<m:OverflowToolbarButton text="Del" icon="sap-icon://delete"/>
+				
             </m:OverflowToolbar>
         </m:footer>
       <m:headerContent/>
