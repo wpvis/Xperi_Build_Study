@@ -20,8 +20,9 @@
         </m:content>
         <m:footer>
             <m:OverflowToolbar design="Auto">
-				<m:ToolbarSpacer/>
+				<m:ToolbarSpflagr/>
 				<m:OverflowToolbarButton text="Add" icon="sap-icon://add"/>
+				<m:OverflowToolbarButton text="Flag" icon="sap-icon://flag"/>
             </m:OverflowToolbar>
         </m:footer>
       <m:headerContent/>
