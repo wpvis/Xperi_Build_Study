@@ -1,0 +1,120 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.14837063277854559_S2" xmlns:m="sap.m" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+    <m:Page showHeader="true" title="Factuurdetails" showFooter="true" showNavButton="false">
+        <m:content>
+            <layout:VerticalLayout width="100%" visible="true">
+                <layout:content>
+                    <m:ObjectListItem intro="Factuur" title="{Factuurnummer}" icon="" number="{Waarde}" numberUnit="EUR" numberState="None" type="Active" selected="false" showMarkers="false">
+                        <m:attributes/>
+                        <m:firstStatus/>
+                        <m:secondStatus/>
+                    </m:ObjectListItem>
+                </layout:content>
+            </layout:VerticalLayout>
+            <m:IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <m:items>
+                    <m:IconTabFilter icon="sap-icon://hint" iconColor="Positive" text="Kopgegevens" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <form:SimpleForm minWidth="-1" maxContainerCols="2" layout="ResponsiveGridLayout" editable="false" visible="true">
+                                <form:content>
+                                    <m:Label text="Inkooporder" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Inkooporder}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Label text="Verkooporder" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Verkooporder}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Label text="Levering" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Levering}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                </form:content>
+                                <form:title/>
+                            </form:SimpleForm>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabSeparator icon="" iconDensityAware="false"/>
+                    <m:IconTabFilter icon="sap-icon://collaborate" iconColor="Neutral" text="Partner rollen" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <form:SimpleForm minWidth="-1" maxContainerCols="2" layout="ResponsiveGridLayout" editable="false" visible="true">
+                                <form:content>
+                                    <m:Label text="Opdrachtgever" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Soldto}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Label text="Factuurontvanger" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Billto}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Label text="Betaler" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Payer}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                </form:content>
+                                <form:title/>
+                            </form:SimpleForm>
+                        </m:content>
+                    </m:IconTabFilter>
+                </m:items>
+                <m:content>
+                    <m:Text text="Tab Bar Content goes here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                </m:content>
+            </m:IconTabBar>
+            <m:Table mode="SingleSelectMaster" width="100%" noDataText="No data" backgroundDesign="Translucent" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" visible="true" items="{Fact_Pos}">
+                <m:items>
+                    <m:ColumnListItem type="Active">
+                        <m:cells>
+                            <m:ObjectIdentifier title="{ID}" text="" titleActive="false" visible="true"/>
+                            <m:Text text="{Omschrijving}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{path: 'Aantal', type: 'sap.ui.model.type.String'}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{path: 'Prijs', type: 'sap.ui.model.type.String'}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:Text text="{path: 'Subtotaal', type: 'sap.ui.model.type.String'}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:cells>
+                    </m:ColumnListItem>
+                </m:items>
+                <m:headerToolbar>
+                    <m:Toolbar width="auto" height="46px" design="Solid" visible="true" enabled="true">
+                        <m:content>
+                            <m:ToolbarSpacer width=""/>
+                            <m:Text text="Factuurposities" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                            <m:ToolbarSpacer width=""/>
+                        </m:content>
+                        <m:tooltip/>
+                    </m:Toolbar>
+                </m:headerToolbar>
+                <m:columns>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" mergeDuplicates="false" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+                        <m:header>
+                            <m:Text text="Positie" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" mergeDuplicates="false" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+                        <m:header>
+                            <m:Text text="Omschrijving" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" mergeDuplicates="false" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+                        <m:header>
+                            <m:Text text="Aantal" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" mergeDuplicates="false" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+                        <m:header>
+                            <m:Text text="Prijs" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                    <m:Column width="auto" hAlign="Left" vAlign="Top" mergeDuplicates="false" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+                        <m:header>
+                            <m:Text text="Subtotaal" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:header>
+                        <m:footer/>
+                    </m:Column>
+                </m:columns>
+            </m:Table>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight>
+                    <m:Button text="" type="Default" icon="sap-icon://nav-back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </m:contentRight>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent/>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

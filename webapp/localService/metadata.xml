@@ -1,0 +1,231 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="9905b1bdb27f64b00d2e639f" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="9905b1bdb27f64b00d2e639f_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="KlantSet" EntityType="9905b1bdb27f64b00d2e639f.Klant" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="KlantOmzetvanOmzet" Association="9905b1bdb27f64b00d2e639f.KlantOmzetvanOmzet" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="KlantSet" Role="FromRole_KlantOmzetvanOmzet"/>
+                    <End EntitySet="OmzetSet" Role="ToRole_KlantOmzetvanOmzet"/>
+                </AssociationSet>
+                <AssociationSet Name="KlantAdresvanAdres" Association="9905b1bdb27f64b00d2e639f.KlantAdresvanAdres" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="KlantSet" Role="FromRole_KlantAdresvanAdres"/>
+                    <End EntitySet="AdresSet" Role="ToRole_KlantAdresvanAdres"/>
+                </AssociationSet>
+                <AssociationSet Name="KlantAfsprakenAfspraken" Association="9905b1bdb27f64b00d2e639f.KlantAfsprakenAfspraken" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="KlantSet" Role="FromRole_KlantAfsprakenAfspraken"/>
+                    <End EntitySet="AfsprakenSet" Role="ToRole_KlantAfsprakenAfspraken"/>
+                </AssociationSet>
+                <AssociationSet Name="KlantFactuurkopFactuurkop" Association="9905b1bdb27f64b00d2e639f.KlantFactuurkopFactuurkop" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="KlantSet" Role="FromRole_KlantFactuurkopFactuurkop"/>
+                    <End EntitySet="FactuurkopSet" Role="ToRole_KlantFactuurkopFactuurkop"/>
+                </AssociationSet>
+                <AssociationSet Name="KlantSalesordersSalesorders" Association="9905b1bdb27f64b00d2e639f.KlantSalesordersSalesorders" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="KlantSet" Role="FromRole_KlantSalesordersSalesorders"/>
+                    <End EntitySet="SalesordersSet" Role="ToRole_KlantSalesordersSalesorders"/>
+                </AssociationSet>
+                <EntitySet Name="OmzetSet" EntityType="9905b1bdb27f64b00d2e639f.Omzet" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="AdresSet" EntityType="9905b1bdb27f64b00d2e639f.Adres" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="AfsprakenSet" EntityType="9905b1bdb27f64b00d2e639f.Afspraken" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="FactuurkopSet" EntityType="9905b1bdb27f64b00d2e639f.Factuurkop" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="FactuurkopFact_PosFact_Pos" Association="9905b1bdb27f64b00d2e639f.FactuurkopFact_PosFact_Pos" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="FactuurkopSet" Role="FromRole_FactuurkopFact_PosFact_Pos"/>
+                    <End EntitySet="Fact_PosSet" Role="ToRole_FactuurkopFact_PosFact_Pos"/>
+                </AssociationSet>
+                <EntitySet Name="Fact_PosSet" EntityType="9905b1bdb27f64b00d2e639f.Fact_Pos" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="SalesordersSet" EntityType="9905b1bdb27f64b00d2e639f.Salesorders" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="SalesordersSales_PosSales_Pos" Association="9905b1bdb27f64b00d2e639f.SalesordersSales_PosSales_Pos" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="SalesordersSet" Role="FromRole_SalesordersSales_PosSales_Pos"/>
+                    <End EntitySet="Sales_PosSet" Role="ToRole_SalesordersSales_PosSales_Pos"/>
+                </AssociationSet>
+                <EntitySet Name="Sales_PosSet" EntityType="9905b1bdb27f64b00d2e639f.Sales_Pos" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="Klant">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Klantnr" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Klantnr"/>
+                <Property Name="Naam" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Naam"/>
+                <Property Name="Naam_2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Naam_2"/>
+                <Property Name="GoogleMaps" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="GoogleMaps"/>
+                <Property Name="___FK_2899aac8e1f316d60d323c8e" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_2899aac8e1f316d60d323c8e"/>
+                <NavigationProperty Name="Omzetvan" Relationship="9905b1bdb27f64b00d2e639f.KlantOmzetvanOmzet" FromRole="FromRole_KlantOmzetvanOmzet" ToRole="ToRole_KlantOmzetvanOmzet"/>
+                <NavigationProperty Name="Adresvan" Relationship="9905b1bdb27f64b00d2e639f.KlantAdresvanAdres" FromRole="FromRole_KlantAdresvanAdres" ToRole="ToRole_KlantAdresvanAdres"/>
+                <NavigationProperty Name="Afspraken" Relationship="9905b1bdb27f64b00d2e639f.KlantAfsprakenAfspraken" FromRole="FromRole_KlantAfsprakenAfspraken" ToRole="ToRole_KlantAfsprakenAfspraken"/>
+                <NavigationProperty Name="Factuurkop" Relationship="9905b1bdb27f64b00d2e639f.KlantFactuurkopFactuurkop" FromRole="FromRole_KlantFactuurkopFactuurkop" ToRole="ToRole_KlantFactuurkopFactuurkop"/>
+                <NavigationProperty Name="Salesorders" Relationship="9905b1bdb27f64b00d2e639f.KlantSalesordersSalesorders" FromRole="FromRole_KlantSalesordersSalesorders" ToRole="ToRole_KlantSalesordersSalesorders"/>
+            </EntityType>
+            <Association Name="KlantOmzetvanOmzet">
+                <End Type="9905b1bdb27f64b00d2e639f.Klant" Multiplicity="1" Role="FromRole_KlantOmzetvanOmzet"/>
+                <End Type="9905b1bdb27f64b00d2e639f.Omzet" Multiplicity="*" Role="ToRole_KlantOmzetvanOmzet"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_KlantOmzetvanOmzet">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_KlantOmzetvanOmzet">
+                        <PropertyRef Name="___FK_05c81302f38f18100d2e646f"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="KlantAdresvanAdres">
+                <End Type="9905b1bdb27f64b00d2e639f.Klant" Multiplicity="1" Role="FromRole_KlantAdresvanAdres"/>
+                <End Type="9905b1bdb27f64b00d2e639f.Adres" Multiplicity="1" Role="ToRole_KlantAdresvanAdres"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_KlantAdresvanAdres">
+                        <PropertyRef Name="___FK_2899aac8e1f316d60d323c8e"/>
+                    </Principal>
+                    <Dependent Role="ToRole_KlantAdresvanAdres">
+                        <PropertyRef Name="ID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="KlantAfsprakenAfspraken">
+                <End Type="9905b1bdb27f64b00d2e639f.Klant" Multiplicity="1" Role="FromRole_KlantAfsprakenAfspraken"/>
+                <End Type="9905b1bdb27f64b00d2e639f.Afspraken" Multiplicity="*" Role="ToRole_KlantAfsprakenAfspraken"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_KlantAfsprakenAfspraken">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_KlantAfsprakenAfspraken">
+                        <PropertyRef Name="___FK_95d730d5d0118aaf0d324ff6"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="KlantFactuurkopFactuurkop">
+                <End Type="9905b1bdb27f64b00d2e639f.Klant" Multiplicity="1" Role="FromRole_KlantFactuurkopFactuurkop"/>
+                <End Type="9905b1bdb27f64b00d2e639f.Factuurkop" Multiplicity="*" Role="ToRole_KlantFactuurkopFactuurkop"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_KlantFactuurkopFactuurkop">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_KlantFactuurkopFactuurkop">
+                        <PropertyRef Name="___FK_c12160b75fe386680d325dff"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="KlantSalesordersSalesorders">
+                <End Type="9905b1bdb27f64b00d2e639f.Klant" Multiplicity="1" Role="FromRole_KlantSalesordersSalesorders"/>
+                <End Type="9905b1bdb27f64b00d2e639f.Salesorders" Multiplicity="*" Role="ToRole_KlantSalesordersSalesorders"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_KlantSalesordersSalesorders">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_KlantSalesordersSalesorders">
+                        <PropertyRef Name="___FK_05bb9f63999a44c90d3277e7"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Omzet">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_05c81302f38f18100d2e646f" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_05c81302f38f18100d2e646f"/>
+                <Property Name="Omzet" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="J_2015"/>
+                <Property Name="Jaar" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+            </EntityType>
+            <EntityType Name="Adres">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Straat" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Straat"/>
+                <Property Name="Postcode" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Postcode"/>
+                <Property Name="Plaats" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Plaats"/>
+            </EntityType>
+            <EntityType Name="Afspraken">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_95d730d5d0118aaf0d324ff6" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_95d730d5d0118aaf0d324ff6"/>
+                <Property Name="Contactpersoon" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Contactpersoon"/>
+                <Property Name="Functie" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Functie"/>
+                <Property Name="Datum" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Datum"/>
+                <Property Name="Van_Tot" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Van_Tot"/>
+                <Property Name="Reden" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Reden"/>
+            </EntityType>
+            <EntityType Name="Factuurkop">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_c12160b75fe386680d325dff" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_c12160b75fe386680d325dff"/>
+                <Property Name="Factuurnummer" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Factuurnummer"/>
+                <Property Name="Factuurdatum" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Factuurdatum"/>
+                <Property Name="UitersteBet" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="UitersteBet"/>
+                <Property Name="Waarde" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Waarde"/>
+                <Property Name="Inkooporder" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Inkooporder"/>
+                <Property Name="Verkooporder" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Verkooporder"/>
+                <Property Name="Levering" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Levering"/>
+                <Property Name="Soldto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Soldto"/>
+                <Property Name="Billto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Billto"/>
+                <Property Name="Payer" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Payer"/>
+                <NavigationProperty Name="Fact_Pos" Relationship="9905b1bdb27f64b00d2e639f.FactuurkopFact_PosFact_Pos" FromRole="FromRole_FactuurkopFact_PosFact_Pos" ToRole="ToRole_FactuurkopFact_PosFact_Pos"/>
+            </EntityType>
+            <Association Name="FactuurkopFact_PosFact_Pos">
+                <End Type="9905b1bdb27f64b00d2e639f.Factuurkop" Multiplicity="1" Role="FromRole_FactuurkopFact_PosFact_Pos"/>
+                <End Type="9905b1bdb27f64b00d2e639f.Fact_Pos" Multiplicity="*" Role="ToRole_FactuurkopFact_PosFact_Pos"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_FactuurkopFact_PosFact_Pos">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_FactuurkopFact_PosFact_Pos">
+                        <PropertyRef Name="___FK_646916b3ec16c2760d326ab5"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Fact_Pos">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_646916b3ec16c2760d326ab5" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_646916b3ec16c2760d326ab5"/>
+                <Property Name="Omschrijving" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Omschrijving"/>
+                <Property Name="Aantal" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Aantal"/>
+                <Property Name="Prijs" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Prijs"/>
+                <Property Name="Subtotaal" Type="Edm.Decimal" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:calculated="{&quot;calculation&quot;:&quot;[{\&quot;label\&quot;:\&quot;*\&quot;,\&quot;name\&quot;:\&quot;times\&quot;,\&quot;type\&quot;:\&quot;operator\&quot;,\&quot;left\&quot;:[{\&quot;label\&quot;:\&quot;PROPERTY\&quot;,\&quot;name\&quot;:\&quot;property\&quot;,\&quot;entityName\&quot;:\&quot;Fact_Pos\&quot;,\&quot;entityId\&quot;:\&quot;Fact_Pos\&quot;,\&quot;navPropName\&quot;:\&quot;\&quot;,\&quot;navPropId\&quot;:\&quot;\&quot;,\&quot;navPropMultiplicity\&quot;:null,\&quot;navPropOp\&quot;:null,\&quot;propertyName\&quot;:\&quot;Aantal\&quot;,\&quot;propertyId\&quot;:\&quot;Aantal\&quot;,\&quot;type\&quot;:\&quot;property\&quot;,\&quot;propertyType\&quot;:\&quot;Decimal\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:0,\&quot;computedType\&quot;:\&quot;number\&quot;}],\&quot;right\&quot;:[{\&quot;label\&quot;:\&quot;PROPERTY\&quot;,\&quot;name\&quot;:\&quot;property\&quot;,\&quot;entityName\&quot;:\&quot;Fact_Pos\&quot;,\&quot;entityId\&quot;:\&quot;Fact_Pos\&quot;,\&quot;navPropName\&quot;:\&quot;\&quot;,\&quot;navPropId\&quot;:\&quot;\&quot;,\&quot;navPropMultiplicity\&quot;:null,\&quot;navPropOp\&quot;:null,\&quot;propertyName\&quot;:\&quot;Prijs\&quot;,\&quot;propertyId\&quot;:\&quot;Prijs\&quot;,\&quot;type\&quot;:\&quot;property\&quot;,\&quot;propertyType\&quot;:\&quot;Decimal\&quot;,\&quot;isNewLine\&quot;:true,\&quot;id\&quot;:2,\&quot;computedType\&quot;:\&quot;number\&quot;}],\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:1,\&quot;computedType\&quot;:\&quot;number\&quot;}]&quot;,&quot;inputProperties&quot;:[{&quot;navPropId&quot;:&quot;&quot;,&quot;entityId&quot;:&quot;Fact_Pos&quot;,&quot;propertyId&quot;:&quot;Aantal&quot;,&quot;_id&quot;:{&quot;_bsontype&quot;:&quot;ObjectID&quot;,&quot;id&quot;:&quot;Xo¤\f.P\u000e3\u0002-&quot;}},{&quot;navPropId&quot;:&quot;&quot;,&quot;entityId&quot;:&quot;Fact_Pos&quot;,&quot;propertyId&quot;:&quot;Prijs&quot;,&quot;_id&quot;:{&quot;_bsontype&quot;:&quot;ObjectID&quot;,&quot;id&quot;:&quot;Xo¤\f.P\u000e3\u0002,&quot;}}]}" sap:label="Subtotaal"/>
+            </EntityType>
+            <EntityType Name="Salesorders">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_05bb9f63999a44c90d3277e7" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_05bb9f63999a44c90d3277e7"/>
+                <Property Name="Ordernr" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Ordernr"/>
+                <Property Name="Orderdatum" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Orderdatum"/>
+                <Property Name="Leverdatum" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Leverdatum"/>
+                <Property Name="Inkooporder" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Inkooporder"/>
+                <Property Name="Waarde" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Waarde"/>
+                <Property Name="Soldto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Soldto"/>
+                <Property Name="Billto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Billto"/>
+                <Property Name="Shipto" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Shipto"/>
+                <NavigationProperty Name="Sales_Pos" Relationship="9905b1bdb27f64b00d2e639f.SalesordersSales_PosSales_Pos" FromRole="FromRole_SalesordersSales_PosSales_Pos" ToRole="ToRole_SalesordersSales_PosSales_Pos"/>
+            </EntityType>
+            <Association Name="SalesordersSales_PosSales_Pos">
+                <End Type="9905b1bdb27f64b00d2e639f.Salesorders" Multiplicity="1" Role="FromRole_SalesordersSales_PosSales_Pos"/>
+                <End Type="9905b1bdb27f64b00d2e639f.Sales_Pos" Multiplicity="*" Role="ToRole_SalesordersSales_PosSales_Pos"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SalesordersSales_PosSales_Pos">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SalesordersSales_PosSales_Pos">
+                        <PropertyRef Name="___FK_8bbfb6c5eb5507b20d6066b4"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Sales_Pos">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_8bbfb6c5eb5507b20d6066b4" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_8bbfb6c5eb5507b20d6066b4"/>
+                <Property Name="Omschrijving" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Omschrijving"/>
+                <Property Name="Aantal" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Aantal"/>
+                <Property Name="Prijs" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Prijs"/>
+                <Property Name="SubTotaal" Type="Edm.Decimal" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:calculated="{&quot;calculation&quot;:&quot;[{\&quot;label\&quot;:\&quot;*\&quot;,\&quot;name\&quot;:\&quot;times\&quot;,\&quot;type\&quot;:\&quot;operator\&quot;,\&quot;left\&quot;:[{\&quot;label\&quot;:\&quot;PROPERTY\&quot;,\&quot;name\&quot;:\&quot;property\&quot;,\&quot;entityName\&quot;:\&quot;Sales_Pos\&quot;,\&quot;entityId\&quot;:\&quot;Sales_Pos\&quot;,\&quot;navPropName\&quot;:\&quot;\&quot;,\&quot;navPropId\&quot;:\&quot;\&quot;,\&quot;navPropMultiplicity\&quot;:null,\&quot;navPropOp\&quot;:null,\&quot;propertyName\&quot;:\&quot;Aantal\&quot;,\&quot;propertyId\&quot;:\&quot;Aantal\&quot;,\&quot;type\&quot;:\&quot;property\&quot;,\&quot;propertyType\&quot;:\&quot;Decimal\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:0,\&quot;computedType\&quot;:\&quot;number\&quot;}],\&quot;right\&quot;:[{\&quot;label\&quot;:\&quot;PROPERTY\&quot;,\&quot;name\&quot;:\&quot;property\&quot;,\&quot;entityName\&quot;:\&quot;Sales_Pos\&quot;,\&quot;entityId\&quot;:\&quot;Sales_Pos\&quot;,\&quot;navPropName\&quot;:\&quot;\&quot;,\&quot;navPropId\&quot;:\&quot;\&quot;,\&quot;navPropMultiplicity\&quot;:null,\&quot;navPropOp\&quot;:null,\&quot;propertyName\&quot;:\&quot;Prijs\&quot;,\&quot;propertyId\&quot;:\&quot;Prijs\&quot;,\&quot;type\&quot;:\&quot;property\&quot;,\&quot;propertyType\&quot;:\&quot;Decimal\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:2,\&quot;computedType\&quot;:\&quot;number\&quot;}],\&quot;displayLabel\&quot;:\&quot;*\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:1,\&quot;computedType\&quot;:\&quot;number\&quot;}]&quot;,&quot;inputProperties&quot;:[{&quot;navPropId&quot;:&quot;&quot;,&quot;entityId&quot;:&quot;Sales_Pos&quot;,&quot;propertyId&quot;:&quot;Aantal&quot;,&quot;_id&quot;:{&quot;_bsontype&quot;:&quot;ObjectID&quot;,&quot;id&quot;:&quot;X~«P\u000ec@¢&quot;}},{&quot;navPropId&quot;:&quot;&quot;,&quot;entityId&quot;:&quot;Sales_Pos&quot;,&quot;propertyId&quot;:&quot;Prijs&quot;,&quot;_id&quot;:{&quot;_bsontype&quot;:&quot;ObjectID&quot;,&quot;id&quot;:&quot;X~«P\u000ec@¢&quot;}}]}" sap:label="SubTotaal"/>
+                <Property Name="Positie" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Positie"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

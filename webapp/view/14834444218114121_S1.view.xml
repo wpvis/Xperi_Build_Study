@@ -1,0 +1,184 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.14834444218114121_S1" xmlns:m="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:chart="sap.chart" xmlns:data="sap.chart.data">
+    <m:Page title="Klant details" showHeader="true" showFooter="true" showNavButton="false">
+        <m:content>
+            <m:ObjectHeader intro="" title="{Naam}" icon="" number="{Klantnr}" numberUnit="" numberState="None" showMarkers="false" markFavorite="false" markFlagged="false" backgroundDesign="Transparent" condensed="false">
+                <m:attributes/>
+                <m:statuses/>
+            </m:ObjectHeader>
+            <m:IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <m:items>
+                    <m:IconTabFilter icon="sap-icon://hint" iconColor="Positive" text="Klant info" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <form:SimpleForm minWidth="-1" maxContainerCols="2" layout="ResponsiveGridLayout" editable="false" visible="true">
+                                <form:content>
+                                    <m:Label text="Naam 2" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Naam_2}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Label text="Straat" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Adresvan/Straat}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Label text="Postcode" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Adresvan/Postcode}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Label text="Plaats" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                    <m:Text text="{Adresvan/Plaats}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                </form:content>
+                                <form:title>
+                                    <core:Title text="Adres" level="Auto"/>
+                                </form:title>
+                            </form:SimpleForm>
+                            <m:Link href="{GoogleMaps}" text="Google maps lokatie" textAlign="Begin" width="156.00000000px" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false" press="_onLinkPress"/>
+                            <chart:Chart id="sap_IconTabBar_Page_0-content-sap_m_IconTabBar-2-items-sap_m_IconTabFilter-1-content-sap_chart_ColumnChart-1483445757101" width="100%" height="450px" visibleDimensions="Jaar" visibleMeasures="Omzet" data="{Omzetvan}" chartType="column" isAnalytical="false" selectionMode="Single" uiConfig="{}" vizProperties="{plotArea:{dataLabel:{visible: true,hideWhenOverlap:true}}}">
+                                <chart:dimensions>
+                                    <data:Dimension name="Jaar" role="category"/>
+                                </chart:dimensions>
+                                <chart:measures>
+                                    <data:Measure name="Omzet" role="axis2"/>
+                                </chart:measures>
+                            </chart:Chart>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabSeparator icon="" iconDensityAware="false"/>
+                    <m:IconTabFilter icon="sap-icon://appointment" iconColor="Default" text="Afspraken" count="1" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" items="{Afspraken}">
+                                <m:headerToolbar/>
+                                <m:columns>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Contactpersoon" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Datum" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Tijd" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Reden afspraak" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Gespreksverslag" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem type="Active">
+                                        <m:cells>
+                                            <m:ObjectIdentifier title="{Contactpersoon}" text="{Functie}" titleActive="false" visible="true"/>
+                                            <m:Text text="{Datum}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{Van_Tot}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{Reden}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Button text="Button" type="Default" icon="sap-icon://doc-attachment" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabSeparator icon="" iconDensityAware="false"/>
+                    <m:IconTabFilter icon="sap-icon://money-bills" iconColor="Default" text="Facturen" count="1" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" items="{Factuurkop}">
+                                <m:headerToolbar/>
+                                <m:columns>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Factuur" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Uiterste betaaldatum" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Factuurwaarde" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem type="Active" press="_onRowPress">
+                                        <m:cells>
+                                            <m:ObjectIdentifier title="{Factuurnummer}" text="{Factuurdatum}" titleActive="false" visible="true"/>
+                                            <m:Text text="{UitersteBet}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:ObjectNumber number="{Waarde}" unit="Euro" emphasized="true" state="None"/>
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabSeparator icon="" iconDensityAware="false"/>
+                    <m:IconTabFilter icon="sap-icon://sales-order" iconColor="Default" text="Verkooporders" count="1" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" items="{Salesorders}">
+                                <m:headerToolbar/>
+                                <m:columns>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Ordernummer" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Inkooporder" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Orderdatum" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Leverdatum" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Waarde" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem type="Active" press="_onRowPress1">
+                                        <m:cells>
+                                            <m:ObjectIdentifier title="{Ordernr}" text="" titleActive="false" visible="true"/>
+                                            <m:Text text="{Inkooporder}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{Orderdatum}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{Leverdatum}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{Waarde}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </m:content>
+                    </m:IconTabFilter>
+                </m:items>
+                <m:content/>
+            </m:IconTabBar>
+        </m:content>
+        <m:footer/>
+        <m:headerContent/>
+    </m:Page>
+</mvc:View>
