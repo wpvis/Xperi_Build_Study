@@ -18,6 +18,12 @@
                 </m:headerToolbar>
             </m:List>
         </m:content>
-        <m:headerContent/>
+        <m:footer>
+            <m:OverflowToolbar design="Auto">
+				<m:ToolbarSpacer/>
+				<m:OverflowToolbarButton text="Add" icon="sap-icon://add"/>
+            </m:OverflowToolbar>
+        </m:footer>
+      <m:headerContent/>
     </m:Page>
 </mvc:View>
