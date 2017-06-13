@@ -4,7 +4,8 @@ sap.ui.define([
 		"sap/ui/core/routing/History"
 	], function (BaseController, JSONModel, History) {
 		"use strict";
-
+// Test of committen goed gaat......
+// van bertil
 		return BaseController.extend("generated.app.controller.App", {
 // commentaar door remconnnnnn
 			onInit : function () {
