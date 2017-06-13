@@ -5,6 +5,7 @@ sap.ui.define([
 	], function (BaseController, JSONModel, History) {
 		"use strict";
 // Test of committen goed gaat......
+// van bertil
 		return BaseController.extend("generated.app.controller.App", {
 
 			onInit : function () {
