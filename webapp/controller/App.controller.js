@@ -6,7 +6,7 @@ sap.ui.define([
 		"use strict";
 
 		return BaseController.extend("generated.app.controller.App", {
-
+// commentaar door remconnnnnn
 			onInit : function () {
 				var oViewModel,
 					fnSetAppNotBusy,
