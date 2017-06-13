@@ -9,4 +9,9 @@ fioriHtmlRunner.html
 .*/fioriHtmlRunner.html
 visual_ext_index.html
 /webapp/visual_ext_index.html
+<<<<<<< HEAD
+=======
+preview.json
+cp.project.properties.json
+>>>>>>> branch 'master' of https://github.com/wpvis/Xperi_Build_Study.git
 /.user.project.json

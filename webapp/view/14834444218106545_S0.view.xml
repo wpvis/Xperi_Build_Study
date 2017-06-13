@@ -19,12 +19,11 @@
             </m:List>
         </m:content>
         <m:footer>
-            <m:Bar design="Auto">
-                <m:contentLeft/>
-                <m:contentMiddle/>
-                <m:contentRight/>
-            </m:Bar>
+            <m:OverflowToolbar design="Auto">
+				<m:ToolbarSpacer/>
+				<m:OverflowToolbarButton text="Add" icon="sap-icon://add"/>
+            </m:OverflowToolbar>
         </m:footer>
-        <m:headerContent/>
+      <m:headerContent/>
     </m:Page>
 </mvc:View>
