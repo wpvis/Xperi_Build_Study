@@ -18,13 +18,6 @@
                 </m:headerToolbar>
             </m:List>
         </m:content>
-        <m:footer>
-            <m:Bar design="Auto">
-                <m:contentLeft/>
-                <m:contentMiddle/>
-                <m:contentRight/>
-            </m:Bar>
-        </m:footer>
         <m:headerContent/>
     </m:Page>
 </mvc:View>
